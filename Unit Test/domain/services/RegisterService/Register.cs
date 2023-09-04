@@ -1,4 +1,4 @@
-namespace Unit_Test
+namespace Unit_Test.domain.services.RegisterService
 {
     public class RegisterService
     {

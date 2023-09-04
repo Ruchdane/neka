@@ -1,4 +1,4 @@
-namespace Unit_Test
+namespace Unit_Test.domain.assembler.AccountAssembler
 {
     public class AccountAssmebler
     {

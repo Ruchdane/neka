@@ -1,6 +1,6 @@
-namespace Unit_Test
+namespace Unit_Test.domain.services.AuthenticationService
 {
-    public class AuthenticationService
+    public class Authenticate
     {
         [Fact]
         public void UsernameDoesntExist()
