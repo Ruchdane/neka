@@ -2,7 +2,13 @@
 {
     public class AuthenticateDto
     {
-        public username string {get;}
-        public profil string {get;}
+        public AuthenticateDto(string username, string profil)
+        {
+            this.username = username;
+            this.profil = profil;
+        }
+
+        public string username { get;}
+        public  string profil  { get;}
     }
 }

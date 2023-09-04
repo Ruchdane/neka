@@ -1,9 +1,16 @@
 ﻿namespace Backend.domain.dto
 {
-    public class AccountCreateAccountDtontDtoWithHashPassword
+    public class CreateAcountDto
     {
-        public username string {get;}
-        public username string {get;}
-        public profil string {get;}
+        public CreateAcountDto(string username, string password, string profil)
+        {
+            this.username = username;
+            this.password = password;
+            this.profil = profil;
+        }
+
+        public string username  { get;}
+        public string password { get;}
+        public string profil { get;}
     }
 }

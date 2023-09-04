@@ -1,11 +1,11 @@
 import {
     createBrowserRouter,
   } from "react-router-dom";
-import App from "./app/App";
-import { LoginForm } from "../feature/auth/login";
-import { RegisterForm } from "../feature/register/register";
-import ErrorPage from "./error";
-import { AuthGurd } from "../feature/auth/guard";
+import App from "./pages/app/App";
+import { LoginForm } from "./feature/auth/login";
+import { RegisterForm } from "./feature/register/register";
+import ErrorPage from "./pages/error";
+import { AuthGurd } from "./feature/auth/guard";
 
 export const router = createBrowserRouter([
     {
