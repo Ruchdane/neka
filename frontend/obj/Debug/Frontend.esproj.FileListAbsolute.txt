@@ -1,0 +1,2 @@
+C:\Users\AMADOU\source\repos\neka\frontend\obj\Debug\Frontend.esproj.SuggestedBindingRedirects.cache
+C:\Users\AMADOU\source\repos\neka\frontend\obj\Debug\Frontend.esproj.CoreCompileInputs.cache
