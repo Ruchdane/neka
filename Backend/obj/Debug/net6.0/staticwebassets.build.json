@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3tg8NG9xhGu3tobR5fc25vlu3P0aN2IQF+mkvnMoskc=",
+  "Hash": "W3blaipy6b1T0Wn2QvEAjPSyMtDcJwnn+AlxgovzQ9g=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Backend\\wwwroot",
       "Source": "Backend",
-      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-79422c8a.css",
+      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\assets\\index-79422c8a.css",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "assets/index-79422c8a.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-79422c8a.css"
     },
     {
-      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-b70cb6f8.js",
+      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\assets\\index-b70cb6f8.js",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "assets/index-b70cb6f8.js",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-b70cb6f8.js"
     },
     {
-      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\index.html",
+      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\index.html",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\vite.svg",
+      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\vite.svg",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "vite.svg",
       "AssetKind": "All",

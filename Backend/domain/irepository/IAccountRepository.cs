@@ -6,5 +6,7 @@ namespace Backend.domain.repository
     {
         void Save(CreateAcountDto dto);
         AccountDtoWithHashPassword GetByUsername(string username);
+
+        AccountDtoWithHashPassword GetById(int id);
     }
 }

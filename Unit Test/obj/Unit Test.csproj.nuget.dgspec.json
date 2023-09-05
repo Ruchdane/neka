@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AMADOU\\source\\repos\\neka\\Unit Test\\Unit Test.csproj": {}
+    "E:\\Duamelo\\source\\neka\\Unit Test\\Unit Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj": {
+    "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj",
+        "projectUniqueName": "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\AMADOU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\obj\\",
+        "projectPath": "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\duame\\.nuget\\packages\\",
+        "outputPath": "E:\\Duamelo\\source\\neka\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AMADOU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duame\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.2, )"
             }
           },
           "imports": [
@@ -84,21 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\AMADOU\\source\\repos\\neka\\Unit Test\\Unit Test.csproj": {
+    "E:\\Duamelo\\source\\neka\\Unit Test\\Unit Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMADOU\\source\\repos\\neka\\Unit Test\\Unit Test.csproj",
+        "projectUniqueName": "E:\\Duamelo\\source\\neka\\Unit Test\\Unit Test.csproj",
         "projectName": "Unit Test",
-        "projectPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Unit Test\\Unit Test.csproj",
-        "packagesPath": "C:\\Users\\AMADOU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Unit Test\\obj\\",
+        "projectPath": "E:\\Duamelo\\source\\neka\\Unit Test\\Unit Test.csproj",
+        "packagesPath": "C:\\Users\\duame\\.nuget\\packages\\",
+        "outputPath": "E:\\Duamelo\\source\\neka\\Unit Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AMADOU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duame\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,8 +116,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj": {
-                "projectPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj"
+              "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj": {
+                "projectPath": "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj"
               }
             }
           }
@@ -165,7 +169,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

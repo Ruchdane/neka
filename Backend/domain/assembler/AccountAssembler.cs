@@ -5,13 +5,17 @@ namespace Backend.domain.assembler
 {
     public class AccountAssembler
     {
-        public Account CreateAccount(AccountDtoWithHashPassword dto)
+        public Account CreateAccount(AccountDtoWithHashPassword accountDto)
         {
-            throw new NotImplementedException();
+            Account account = new Account(accountDto.username, accountDto.hashPassword, accountDto.profil);
+
+            return account;
         }
-        public AccountDto CreateAccountDto(Account dto)
+        public AccountDto CreateAccountDto(Account account)
         {
-            throw new NotImplementedException();
+            AccountDto accountDto = new AccountDto(account.GetUsername(), account.GetProfile());
+
+            return accountDto;
         }
 
     }

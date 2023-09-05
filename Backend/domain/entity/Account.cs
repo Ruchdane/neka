@@ -1,7 +1,10 @@
-﻿namespace Backend.domain.entity
+﻿using Backend.domain.dto;
+
+namespace Backend.domain.entity
 {
     public class Account
     {
+        private int Id;
         private string username;
         private string hashPassword;
         private string profil;
@@ -13,20 +16,34 @@
             this.profil = profil;
         }
 
+        public int GetId()
+        {
+            return this.Id;
+        }
         public string GetUsername()
         {
-            throw new NotImplementedException();
+            return this.username;
         }
 
         public string GetProfile()
         {
-            throw new NotImplementedException();
+            return this.profil;
         }
 
 
         public bool CheckPassword(string password)
         {
-            throw new NotImplementedException();
+            return this.hashPassword == password ? true : false;
+        }
+
+        public bool isEqual(Account account)
+        {
+            if (this.profil == account.GetProfile() && 
+                account.CheckPassword(this.hashPassword) && 
+                this.username == account.GetUsername()
+            )
+                return true;
+            return false;
         }
 
 

@@ -24,5 +24,11 @@ namespace Backend.db.dao
             var account = context.Accounts.Where(account => account.Username == username).First();
             return account;
         }
+
+        public Account SelectById(int accountId)
+        {
+            var account = context.Accounts.Where(account => account.Id == accountId).First();
+            return account;
+        }
     }
 }
