@@ -1,0 +1,6 @@
+C:\Users\AMADOU\source\repos\neka\Unit Test\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\AMADOU\source\repos\neka\Unit Test\obj\Debug\net6.0\Unit Test.csproj.AssemblyReference.cache
+C:\Users\AMADOU\source\repos\neka\Unit Test\obj\Debug\net6.0\Unit Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMADOU\source\repos\neka\Unit Test\obj\Debug\net6.0\Unit Test.AssemblyInfoInputs.cache
+C:\Users\AMADOU\source\repos\neka\Unit Test\obj\Debug\net6.0\Unit Test.AssemblyInfo.cs
+C:\Users\AMADOU\source\repos\neka\Unit Test\obj\Debug\net6.0\Unit Test.csproj.CoreCompileInputs.cache

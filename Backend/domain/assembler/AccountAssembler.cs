@@ -5,7 +5,8 @@ namespace Backend.domain.assembler
 {
     public class AccountAssembler
     {
-        public  Account CreateAccount(AccountDtoWithHashPassword dto) {
+        public Account CreateAccount(AccountDtoWithHashPassword dto)
+        {
             throw new NotImplementedException();
         }
         public AccountDto CreateAccountDto(Account dto)
@@ -14,3 +15,4 @@ namespace Backend.domain.assembler
         }
 
     }
+}
