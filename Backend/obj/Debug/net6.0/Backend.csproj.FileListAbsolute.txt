@@ -69,3 +69,4 @@ C:\Users\AMADOU\source\repos\neka\Backend\obj\Debug\net6.0\refint\Backend.dll
 C:\Users\AMADOU\source\repos\neka\Backend\obj\Debug\net6.0\Backend.pdb
 C:\Users\AMADOU\source\repos\neka\Backend\obj\Debug\net6.0\Backend.genruntimeconfig.cache
 C:\Users\AMADOU\source\repos\neka\Backend\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\Backend.staticwebassets.runtime.json
