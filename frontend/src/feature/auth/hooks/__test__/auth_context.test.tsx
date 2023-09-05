@@ -4,9 +4,13 @@ import { renderHook } from "@testing-library/react";
 import { useAuthContext } from "@/feature/auth/hook";
 import { AuthContext } from "@/feature/auth/context";
 import { UseAuthProviderOutsideProvider } from "@/feature/auth/error";
+import { assert, describe, expect, test } from "vitest";
 
 
 describe("[Hook] useAuthContext", () => {
+  test("Shoudl pass",() => {
+    expect(3).toBe(3)
+  })
   test('useAuthContext throws an error when used outside AuthContextProvider', () => {
     // Suppress expected console error warning in this test
     const originalError = console.error;
