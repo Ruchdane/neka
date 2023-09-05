@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "3tg8NG9xhGu3tobR5fc25vlu3P0aN2IQF+mkvnMoskc=",
+  "Source": "Backend",
+  "BasePath": "_content/Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Backend\\wwwroot",
+      "Source": "Backend",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-79422c8a.css",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "assets/index-79422c8a.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-79422c8a.css"
+    },
+    {
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-b70cb6f8.js",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "assets/index-b70cb6f8.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-b70cb6f8.js"
+    },
+    {
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\index.html",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\vite.svg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "vite.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vite.svg"
+    }
+  ]
+}

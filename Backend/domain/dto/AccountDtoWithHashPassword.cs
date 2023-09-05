@@ -2,8 +2,15 @@
 {
     public class AccountDtoWithHashPassword
     {
-        public username string {get;}
-        public hashPassword string {get;}
-        public profil string {get;}
+        public AccountDtoWithHashPassword(string username, string hashPassword, string profil)
+        {
+            this.username = username;
+            this.hashPassword = hashPassword;
+            this.profil = profil;
+        }
+
+        public string username  { get;}
+        public string hashPassword { get;}
+        public string profil { get;}
     }
 }
