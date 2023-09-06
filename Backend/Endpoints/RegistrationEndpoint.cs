@@ -6,7 +6,7 @@ namespace Backend.Endpoints
     {
         public static void Map(WebApplication app,RegistrationController controler)
         {
-            app.MapPost("register",controler.Register) ;
+            app.MapPost("/api/register", controler.Register) ;
         }
     }
 }

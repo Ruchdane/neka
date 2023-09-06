@@ -1,22 +1,22 @@
 ﻿using Backend.domain.dto;
 using Backend.domain.repository;
+using Backend.domain.services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.AppController
 {
-    [ApiController]
-    [Route("auth")]
-    public class AuthenticationController : ControllerBase
+    public class AuthenticationController 
     {
-        private IAccountRepository repo;
-        public AuthenticationController(IAccountRepository repo)
+        AuthenticationService service;
+
+        public AuthenticationController(AuthenticationService service)
         {
-            this.repo = repo;
+            this.service = service;
         }
-        [HttpGet("")]
-        public AccountDto Authenticate()
+
+        public IActionResult Authenticate(AuthenticateRequest request)
         {
-            throw new NotImplementedException();
+            return Ok(service.Authenticate(request));
         }
     }
 }

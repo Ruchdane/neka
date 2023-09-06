@@ -20,9 +20,9 @@ namespace Backend.domain.services
         private IAccountRepository _accountRepository;
         private readonly AppSettings _appSettings;
 
-        public AuthenticationService(IOptions<AppSettings> appSettings, IAccountRepository accountRepository)
+        public AuthenticationService(AppSettings appSettings, IAccountRepository accountRepository)
         {
-            _appSettings = appSettings.Value;
+            _appSettings = appSettings;
             _accountRepository = accountRepository;
         }
 

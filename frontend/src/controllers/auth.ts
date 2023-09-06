@@ -6,5 +6,5 @@ export type  AccountResponse = {
     profile: Profil
 }
 export async function authenticate(username: string,password: string) : Promise<AccountResponse> {
-    return await fetchWraper("GET","/api/auth",JSON.stringify({username,password}));
+    return await fetchWraper("POST","/api/auth",JSON.stringify({username,password}));
 }

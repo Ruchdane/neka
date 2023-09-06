@@ -1,22 +1,23 @@
 ﻿using Backend.domain.dto;
 using Backend.domain.repository;
+using Backend.domain.services;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace Backend.AppController
 {
-    public class RegistrationController 
+    public class RegistrationController  :ControllerBase
     {
-        private IAccountRepository repo;
+        RegistrationService service;
 
-        public RegistrationController(IAccountRepository repo)
+        public RegistrationController(RegistrationService service)
         {
-            this.repo = repo;
+            this.service = service;
         }
 
-        public AccountDto Register()
+        public IActionResult Register(CreateAcountDto account)
         {
-            throw new NotImplementedException();
+            return Ok(service.Register(account));
         }
     }
 }

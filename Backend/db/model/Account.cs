@@ -5,13 +5,13 @@ namespace Backend.db.model
 {
     public class Account
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
-        public string Username { get; set; }
+        public string username { get; set; }
         [Required]
         public string hashPassword { get; set; }
         [Required]
-        public string profile { get; set; }
+        public string profil { get; set; }
     }
 }

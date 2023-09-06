@@ -21,13 +21,13 @@ namespace Backend.db.dao
 
         public Account SelectByUsername(string username)
         {
-            var account = context.Accounts.Where(account => account.Username == username).First();
+            var account = context.Accounts.Where(account => account.username == username).First();
             return account;
         }
 
         public Account SelectById(int accountId)
         {
-            var account = context.Accounts.Where(account => account.Id == accountId).First();
+            var account = context.Accounts.Where(account => account.id == accountId).First();
             return account;
         }
     }
