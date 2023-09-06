@@ -1,8 +1,11 @@
 import { renderHook } from "@testing-library/react";
+import { vi, describe, expect, test,  } from "vitest";
 
-import { usePersistedAuthState } from "@/feature/auth/hook";;
-import { defaultAuthState, authReducer } from "@/feature/auth/reducer";;
-import { RoleSchema } from "@/dto/role.dto";
+import { usePersistedAuthState } from "..";
+import { defaultAuthState, authReducer } from "../../reducer";
+import { Profil } from "../../../profile";
+
+
 // TODO: Add edge case
 //   - No localstorage
 //   - Json parse error
@@ -16,12 +19,11 @@ describe("[hook] usePersistedAuthState", () => {
   test("should return user from local storage when present", () => {
     // Replace with a parameterised test
     const mockUser = {
-      id: 1,
-      role: RoleSchema.enum.Shop,
-      name: "Test User",
+      profile: Profil.Student, 
+      username: "Test User"
     };
     const localStorageMock = {
-      getItem: jest.fn(() => JSON.stringify(mockUser)),
+      getItem: vi.fn(() => JSON.stringify(mockUser)),
     };
     Object.defineProperty(window, "localStorage", { value: localStorageMock });
 
@@ -32,4 +34,3 @@ describe("[hook] usePersistedAuthState", () => {
     expect(result.current).toEqual(expected);
   });
 });
-

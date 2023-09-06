@@ -6,7 +6,7 @@ import { Action, AuthState } from "../reducer";
 export function useAuthContext(): [AuthState, Dispatch<Action>] {
   const userContext = useContext(AuthContext);
   if (!userContext) {
-    throw new Error("Use Auth Provider Outside Provider")
+    throw new Error("Use Auth Provider Outside Of his Provider")
   }
   return [userContext.state, userContext.dispatch];
 }

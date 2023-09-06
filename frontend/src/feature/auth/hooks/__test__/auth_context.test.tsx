@@ -1,27 +1,24 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode } from "react";
 import { renderHook } from "@testing-library/react";
-
-import { useAuthContext } from "@/feature/auth/hook";
-import { AuthContext } from "@/feature/auth/context";
-import { UseAuthProviderOutsideProvider } from "@/feature/auth/error";
-import { assert, describe, expect, test } from "vitest";
+import { vi, describe, expect, test, MockedFunction } from "vitest";
+import { useAuthContext } from "..";
+import { AuthContext } from "../../context";
+import { Action, AuthState, defaultAuthState } from "../../reducer";
 
 
 describe("[Hook] useAuthContext", () => {
-  test("Shoudl pass",() => {
-    expect(3).toBe(3)
-  })
   test('useAuthContext throws an error when used outside AuthContextProvider', () => {
     // Suppress expected console error warning in this test
     const originalError = console.error;
-    const errorMock: jest.MockedFn<typeof console.error> = jest.fn();
+    
+    const errorMock: MockedFunction<typeof console.error> = vi.fn();
     console.error = errorMock;
     try {
       // Render the component that uses the hook without the AuthContextProvider
       renderHook(() => useAuthContext());
     }
     catch (error) {
-      expect(error).toEqual(UseAuthProviderOutsideProvider)
+      expect(error).toEqual(Error("Use Auth Provider Outside Of his Provider"))
     }
     finally {
       // Restore console.error to its original behavior
@@ -35,13 +32,13 @@ describe("[Hook] useAuthContext", () => {
 
   test('useAuthContext returns AuthState and Dispatch function', () => {
     // Mock the AuthContextProvider for testing
-    function AuthContextProvider({ children, value }: { children: ReactNode, value: any }) {
+    function AuthContextProvider({ children, value }: { children: ReactNode, value: {state: AuthState,dispatch: Dispatch<Action>} }) {
       return (
         <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
       );
     }
-    const mockState = { authenticated: true, user: { id: 1, name: 'TestUser' } };
-    const mockDispatch = jest.fn();
+    const mockState = defaultAuthState;
+    const mockDispatch = vi.fn();
 
     const wrapper = ({ children }: { children: ReactNode }) =>
       <AuthContextProvider value={{ state: mockState, dispatch: mockDispatch }}>
@@ -52,7 +49,7 @@ describe("[Hook] useAuthContext", () => {
     // Access the returned state and dispatch from the hook
     const [authState, authDispatch] = result.current;
 
-    expect(authState).toEqual(mockState);
-    expect(authDispatch).toEqual(mockDispatch);
+    expect(authState).toBe(mockState);
+    expect(authDispatch).toBe(mockDispatch);
   });
 })

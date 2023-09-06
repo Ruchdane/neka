@@ -1,67 +1,61 @@
 import { renderHook } from "@testing-library/react";
-import { ReactNode } from "react";
-import { useRouter } from "next/navigation";
+import { ReactNode,Dispatch } from "react";
 
-import { AuthContext } from "@/feature/auth/context";
-import { authReducer, defaultAuthState } from "@/feature/auth/reducer";
-import { useUserContext } from "@/feature/auth/hook";
-import { UseUserContextOutsideOfProvider } from "@/feature/auth/error";
-import { RoleSchema } from "@/dto/role.dto";
+import { AuthContext } from "../../context";
+import { AuthState, authReducer, defaultAuthState,Action } from "../../reducer";
+import { useUserContext } from "..";
+import { vi, describe, expect, test, Mock, MockedFunction,  } from "vitest";
+import { useNavigate } from "react-router-dom";
+import { Profil } from "../../../profile";
 
-// mock useRouter
-jest.mock('next/navigation', () => ({
-  useRouter: jest.fn()
+// mock useNavigate
+vi.mock("react-router-dom", () => ({
+  useNavigate: vi.fn()
 }))
 
 describe("[Hook] useUserContext", () => {
 
   test('useUserContext throws an error when used outside AuthContextProvider', () => {
     // setup a new mocking function for push method
-    const pushMock: jest.MockedFn<typeof useRouter> = jest.fn();
+    const navigateMock: MockedFunction<typeof useNavigate> = vi.fn();
     // mock a return value on useRouter
-    (useRouter as jest.Mock).mockReturnValue({
-      query: {},
-      // return mock for push method
-      push: pushMock,
-      // ... add the props or methods you need
-    })
+    (useNavigate as Mock).mockReturnValue(navigateMock)
 
     // Suppress expected console error warning in this test
     const originalError = console.error;
-    const errorMock: jest.MockedFn<typeof console.error> = jest.fn();
+    const errorMock: MockedFunction<typeof console.error> = vi.fn();
     console.error = errorMock;
     try {
       // Render the component that uses the hook without the AuthContextProvider
       renderHook(() => useUserContext());
     }
     catch (error) {
-      expect(error).toEqual(UseUserContextOutsideOfProvider)
+      expect(error).toEqual(Error("Use User Context Outside Of its Provider"))
     }
     finally {
       // Restore console.error to its original behavior
       console.error = originalError;
       // Expected console error to have been called 1 time
       expect(errorMock).toBeCalled();
-      expect(pushMock).toBeCalledTimes(0);
+      expect(navigateMock).toBeCalledTimes(0);
     }
   });
 
   test('useUserContext returns user state and Dispatch function of logged in user', () => {
     // Mock the AuthContextProvider for testing
-    function AuthContextProvider({ children, value }: { children: ReactNode, value: any }) {
+    function AuthContextProvider({ children, value }: { children: ReactNode, value: {state: AuthState,dispatch: Dispatch<Action>} }) {
       return (
         <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
       );
     }
     // Replace with a parameterised test
     const mockUser = {
-      id: 1,
-      role: RoleSchema.enum.Shop,
-      name: "Test User",
+      profile: Profil.Student,
+      username: "Test User",
     };
     // Simulate a succesfull login
     const mockState = authReducer(defaultAuthState, { type: "LOGIN_SUCCESS", user: mockUser })
-    const mockDispatch = jest.fn();
+    const mockDispatch = vi.fn();
 
     const wrapper = ({ children }: { children: ReactNode }) =>
       <AuthContextProvider value={{ state: mockState, dispatch: mockDispatch }}>
@@ -72,31 +66,26 @@ describe("[Hook] useUserContext", () => {
     // Access the returned state and dispatch from the hook
     const [user, dispatch] = result.current;
 
-    expect(user).toEqual(mockUser);
-    expect(dispatch).toEqual(mockDispatch);
+    expect(user).toBe(mockUser);
+    expect(dispatch).toBe(mockDispatch);
   });
 
-  test('useUserContext redirect to "/" when not authenticated function', () => {
-    jest.mock('next/router', () => ({
-      useRouter: jest.fn()
+  test('useUserContext redirect to "/login" when not authenticated function', () => {
+    vi.mock('next/router', () => ({
+      useNavigate: vi.fn()
     }));
     // setup a new mocking function for push method
-    const pushMock: jest.MockedFn<typeof useRouter> = jest.fn();
-    // mock a return value on useRouter
-    (useRouter as jest.Mock).mockReturnValue({
-      query: {},
-      // return mock for push method
-      push: pushMock,
-      // ... add the props or methods you need
-    })
+    const navigateMock: MockedFunction<typeof useNavigate> = vi.fn();
+    // mock a return value on useNavigate
+    (useNavigate as Mock).mockReturnValue(navigateMock);
 
     // Mock the AuthContextProvider for testing
-    function AuthContextProvider({ children, value }: { children: ReactNode, value: any }) {
+    function AuthContextProvider({ children, value }: { children: ReactNode, value: {state: AuthState,dispatch: Dispatch<Action>} }) {
       return (
         <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
       );
     }
-    const mockDispatch = jest.fn();
+    const mockDispatch = vi.fn();
 
     const wrapper = ({ children }: { children: ReactNode }) =>
       <AuthContextProvider value={{ state: defaultAuthState, dispatch: mockDispatch }}>
@@ -105,10 +94,10 @@ describe("[Hook] useUserContext", () => {
       ;
     const { result } = renderHook(() => useUserContext(), { wrapper })
     // Access the returned state and dispatch from the hook
-    const [_user, dispatch] = result.current;
+    const  dispatch = result.current[1];
     // Further decision need to be made
     // expect(user).toEqual(defaultAuthState.user)
-    expect(pushMock).toBeCalledWith("/")
+    expect(navigateMock).toBeCalledWith("/login")
     expect(dispatch).toEqual(mockDispatch);
   });
 })

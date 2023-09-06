@@ -9,7 +9,7 @@ export function useUserContext(): [UserState, Dispatch<Action>] {
   const navigate = useNavigate()
   const authContext = useContext(AuthContext);
   if (!authContext) {
-    throw new Error("Use AuthContext Outside Of Provider");
+    throw new Error("Use User Context Outside Of its Provider");
   }
   const { state, dispatch } = authContext;
   if (state.user)
