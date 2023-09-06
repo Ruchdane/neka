@@ -1,31 +1,33 @@
 import {
     createBrowserRouter,
   } from "react-router-dom";
-import App from "./pages/app/App";
-import { LoginForm } from "./feature/auth/login";
-import { RegisterForm } from "./feature/register/register";
 import ErrorPage from "./pages/error";
-import { AuthGurd } from "./feature/auth/guard";
+import { AuthGurd } from "./feature/auth/components/guard";
+import { LoginPage } from "./pages/login";
+import { RegisterPage } from "./pages/register";
+import { Profil } from "./feature/profile";
+import HomePage from "./pages/home";
+import { AuthContextProvider } from "./feature/auth/context";
 
 export const router = createBrowserRouter([
     {
       path: "/",
-      element: <AuthGurd><App/></AuthGurd>,
+      element: <AuthContextProvider><AuthGurd><HomePage/></AuthGurd></AuthContextProvider>,
       errorElement: <ErrorPage/>
     },
     {
       path: "/login",
-      element: <LoginForm />,
+      element:  <AuthContextProvider><LoginPage/>,  </AuthContextProvider>
     },
     {
       path: "register/student",
-      element: <RegisterForm profile="student" />,
+      element:  <AuthContextProvider><RegisterPage profile={Profil.Student}/>  </AuthContextProvider>
     },{
       path: "register/admin",
-      element: <RegisterForm profile="admin" />,
+      element:  <AuthContextProvider><RegisterPage profile={Profil.Admin}/>  </AuthContextProvider>
     },{
       path: "register/teacher",
-      element: <RegisterForm profile="teacher" />,
+      element:  <AuthContextProvider><RegisterPage profile={Profil.Teacher}/>  </AuthContextProvider>
     },
   ]);
   
