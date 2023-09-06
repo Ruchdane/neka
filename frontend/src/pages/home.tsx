@@ -1,6 +1,6 @@
 import { useUserContext } from "../feature/auth/hooks";
 import { logout } from "../feature/auth/thunk/localstorage";
-import { Profil, profilToString } from "../feature/profile"
+import { profilToString } from "../feature/profile"
 
 export function HomePage() {
   const [user,dispatch] = useUserContext();

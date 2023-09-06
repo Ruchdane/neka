@@ -1,8 +1,9 @@
-using Backend.db;
-using Backend.db.dao;
+using Backend;
+using Backend.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseHsts();
@@ -13,23 +14,13 @@ app.UseStaticFiles();
 app.UseRouting();
 app.MapFallbackToFile("index.html");
 
+var resourceAllocator = new ResourceAllocator();
+AuthenticationEndpoint.Map(app, resourceAllocator.createAuthenticationResources());
+RegistrationEndpoint.Map(app, resourceAllocator.createRegistrationResources());
 
-using var db = new AppDbContext();
-Console.WriteLine($"Database path: {db.DbPath}.");
 
-var accountDao = new AccountDao(db);
+// using var db = new AppDbContext();
+// Console.WriteLine($"Database path: {db.DbPath}.");
 
-app.MapGet("/api/create", () =>
-{
-    var account = new Backend.db.model.Account { profile = "Student", Username = "Test", hashPassword = "^ddoidnoandoanzaio" } ;
-    accountDao.Insert(account);
-    return "";
-});
-
-app.MapGet("/api/get", () =>
-{
-    var account  = accountDao.SelectByUsername("Test");
-    return account.hashPassword;
-});
 
 app.Run();

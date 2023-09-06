@@ -152,3 +152,8 @@ E:\Duamelo\source\neka\Backend\obj\Debug\net6.0\scopedcss\bundle\Backend.styles.
 E:\Duamelo\source\neka\Backend\obj\Debug\net6.0\Backend.csproj.CopyComplete
 E:\Duamelo\source\neka\Backend\obj\Debug\net6.0\Backend.genruntimeconfig.cache
 E:\Duamelo\source\neka\Backend\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\AMADOU\source\repos\neka\Backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

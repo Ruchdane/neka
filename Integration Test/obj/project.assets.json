@@ -6109,19 +6109,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\duame\\.nuget\\packages\\": {}
+    "C:\\Users\\AMADOU\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Duamelo\\source\\neka\\Integration Test\\Integration Test.csproj",
+      "projectUniqueName": "C:\\Users\\AMADOU\\source\\repos\\neka\\Integration Test\\Integration Test.csproj",
       "projectName": "Integration Test",
-      "projectPath": "E:\\Duamelo\\source\\neka\\Integration Test\\Integration Test.csproj",
-      "packagesPath": "C:\\Users\\duame\\.nuget\\packages\\",
-      "outputPath": "E:\\Duamelo\\source\\neka\\Integration Test\\obj\\",
+      "projectPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Integration Test\\Integration Test.csproj",
+      "packagesPath": "C:\\Users\\AMADOU\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Integration Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\duame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AMADOU\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6184,7 +6184,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

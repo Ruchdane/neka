@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj": {}
+    "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj": {
+    "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "E:\\Duamelo\\source\\neka\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\duame\\.nuget\\packages\\",
-        "outputPath": "E:\\Duamelo\\source\\neka\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\AMADOU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\duame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AMADOU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

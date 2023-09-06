@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W3blaipy6b1T0Wn2QvEAjPSyMtDcJwnn+AlxgovzQ9g=",
+  "Hash": "qEZBhOXegadOtf6E6KXZNENjoQNR0PYUydqMGGvyl84=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "Backend\\wwwroot",
       "Source": "Backend",
-      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\assets\\index-79422c8a.css",
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-427c44f8.js",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
-      "RelativePath": "assets/index-79422c8a.css",
+      "RelativePath": "assets/index-427c44f8.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index-79422c8a.css"
+      "OriginalItemSpec": "wwwroot\\assets\\index-427c44f8.js"
     },
     {
-      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\assets\\index-b70cb6f8.js",
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-c5402a85.css",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
-      "RelativePath": "assets/index-b70cb6f8.js",
+      "RelativePath": "assets/index-c5402a85.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index-b70cb6f8.js"
+      "OriginalItemSpec": "wwwroot\\assets\\index-c5402a85.css"
     },
     {
-      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\index.html",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\vite.svg",
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\vite.svg",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Duamelo\\source\\neka\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "vite.svg",
       "AssetKind": "All",
