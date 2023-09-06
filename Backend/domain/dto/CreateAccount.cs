@@ -9,8 +9,8 @@
             this.profil = profil;
         }
 
-        public string username  { get;}
-        public string password { get;}
-        public string profil { get;}
+        public string username  { get; set; }
+        public string password { get; set; }
+        public string profil { get; set; }
     }
 }

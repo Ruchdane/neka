@@ -15,7 +15,7 @@ namespace Backend.domain.services
             _accountRepository = accountRepository;
         }
 
-        public string Register(CreateAcountDto accountDto)
+        public void Register(CreateAcountDto accountDto)
         {
             var accountExist = _accountRepository.GetByUsername(accountDto.username);
 
@@ -23,9 +23,8 @@ namespace Backend.domain.services
 
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(accountDto.password, 10);
 
-            Account account = new Account(accountDto.username, accountDto.password, accountDto.profil);
-
-            return "";
+            accountDto.password = hashPassword;
+            _accountRepository.Save(accountDto);
         }
     }
 }
