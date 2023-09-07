@@ -21,6 +21,10 @@ namespace Backend.domain.services
 
             if (accountExist) throw new Exception("This account with that username already exist");
 
+            if (!accountExist.username.ToLower().Compare(accountDto.username.Tolower())
+                throw new Exception("This account with that username already exist");
+
+
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(accountDto.password, 10);
 
             accountDto.password = hashPassword;
