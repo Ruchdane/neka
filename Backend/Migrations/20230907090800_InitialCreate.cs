@@ -14,15 +14,15 @@ namespace Backend.Migrations
                 name: "Accounts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Username = table.Column<string>(type: "TEXT", nullable: false),
-                    hashPassword = table.Column<string>(type: "TEXT", nullable: false),
-                    profile = table.Column<string>(type: "TEXT", nullable: false)
+                    HashPassword = table.Column<string>(type: "TEXT", nullable: false),
+                    Profil = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Accounts", x => x.Id);
+                    table.PrimaryKey("PK_Accounts", x => x.id);
                 });
         }
 

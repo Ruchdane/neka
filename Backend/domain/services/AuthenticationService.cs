@@ -11,7 +11,7 @@ namespace Backend.domain.services
 {
     public interface IAuthenticationService
     {
-        AuthenticateResponse Authenticate(AuthenticateRequest model);
+        AuthenticateResponse Authenticate(AuthenticateRequest accountDto);
     }
 
 
@@ -32,6 +32,9 @@ namespace Backend.domain.services
             var account = _accountRepository.GetByUsername(accountDto.Username);
 
             if (account == null) throw new Exception("this account does not exist");
+
+            if (!BCrypt.Net.BCrypt.Verify(accountDto.Password, account.hashPassword))
+                throw new Exception("Username or password is wrong");
 
             // authentication successful so generate jwt token
             var token = generateJwtToken(account);

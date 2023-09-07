@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i/PXYmFMzgEU01DrGruDyV4Jeji56ImCTal/uxw4J1A=",
+  "Hash": "EpG/DVPxXEjsNSkqVXayTdbR5sbkLgaugNijpOZ9PNo=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-85ea5c0a.js",
+      "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-76fb190c.js",
       "SourceId": "Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
-      "RelativePath": "assets/index-85ea5c0a.js",
+      "RelativePath": "assets/index-76fb190c.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,7 +31,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index-85ea5c0a.js"
+      "OriginalItemSpec": "wwwroot\\assets\\index-76fb190c.js"
     },
     {
       "Identity": "C:\\Users\\AMADOU\\source\\repos\\neka\\Backend\\wwwroot\\assets\\index-c5402a85.css",

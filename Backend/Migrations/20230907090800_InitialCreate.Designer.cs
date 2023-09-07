@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230906180204_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20230907090800_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,15 +25,15 @@ namespace Backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("hashPassword")
+                    b.Property<string>("HashPassword")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("profil")
+                    b.Property<string>("Profil")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("username")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

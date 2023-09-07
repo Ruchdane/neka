@@ -8,7 +8,7 @@ namespace Backend.AppController
 {
     public class RegistrationController  :ControllerBase
     {
-        RegistrationService service;
+        readonly RegistrationService service;
 
         public RegistrationController(RegistrationService service)
         {
@@ -17,7 +17,18 @@ namespace Backend.AppController
 
         public IActionResult Register(CreateAcountDto account)
         {
-            return Ok(service.Register(account));
+            var response = new ControllerResponse<string>();
+            try
+            {
+                service.Register(account);
+
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.ErrorMessage = ex.Message;
+            }
+            return Ok(response);
         }
     }
 }

@@ -22,15 +22,15 @@ namespace Backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("hashPassword")
+                    b.Property<string>("HashPassword")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("profil")
+                    b.Property<string>("Profil")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("username")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

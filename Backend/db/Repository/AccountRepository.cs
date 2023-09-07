@@ -14,22 +14,36 @@ namespace Backend.Db.Repository
             this.dao = dao;
         }
 
-        public AccountDtoWithHashPassword GetById(int id)
+        public AccountDtoWithHashPassword? GetById(int id)
         {
             var model = dao.SelectById(id);
-            return new AccountDtoWithHashPassword(model.id, model.username, model.hashPassword, model.profil);
+            if (model == null)
+            {
+                return null;
+            }
+            else
+            {
+                return (AccountDtoWithHashPassword?)new AccountDtoWithHashPassword(model.id, model.Username, model.HashPassword, model.Profil);
+            }
         }
 
-        public AccountDtoWithHashPassword GetByUsername(string username)
+        public AccountDtoWithHashPassword? GetByUsername(string username)
         {
             var model = dao.SelectByUsername(username);
-            return new AccountDtoWithHashPassword(model.id, model.username, model.hashPassword, model.profil);
+            if (model == null)
+            {
+                return null;
+            }
+            else
+            {
+                return (AccountDtoWithHashPassword?)new AccountDtoWithHashPassword(model.id, model.Username, model.HashPassword, model.Profil);
+            }
 
         }
 
         public void Save(CreateAcountDto dto)
         {
-            var accountModel = new Account { username = dto.username, profil = dto.profil, hashPassword = dto.password };
+            var accountModel = new Account { Username = dto.username, Profil = dto.profil, HashPassword = dto.password };
             dao.Insert(accountModel);
         }
     }

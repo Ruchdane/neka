@@ -1,10 +1,9 @@
-import { Profil } from "../feature/profile"
-import { fetchWraper } from "../utils"
-
+import { Profil } from "../feature/profile/index";
+import { controllerFetch } from "./net";
 export type  AccountResponse = {
     username: string,
     profile: Profil
 }
-export async function authenticate(username: string,password: string) : Promise<AccountResponse> {
-    return await fetchWraper("POST","/api/auth",JSON.stringify({username,password}));
+export async function authenticate(Username: string,Password: string) : Promise<AccountResponse> {
+    return await controllerFetch("POST","/api/auth",JSON.stringify({Username,Password}));
 }

@@ -27,7 +27,7 @@ namespace Backend
             return controler;
         }
 
-        public RegistrationController createRegistrationResources()
+        public RegistrationController CreateRegistrationResources()
         {
             var accountDao = new AccountDao(dbContext);
             var accountRepo = new AccountRepository(accountDao);

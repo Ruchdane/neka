@@ -19,16 +19,30 @@ namespace Backend.db.dao
             context.SaveChanges();
         }
 
-        public Account SelectByUsername(string username)
+        public Account? SelectByUsername(string username)
         {
-            var account = context.Accounts.Where(account => account.username == username).First();
-            return account;
+            var accountList = context.Accounts.Where(account => account.Username == username).ToList();
+            if (accountList.Count > 0)
+            {
+                return (Account?)accountList.First();
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public Account SelectById(int accountId)
+        public Account? SelectById(int accountId)
         {
-            var account = context.Accounts.Where(account => account.id == accountId).First();
-            return account;
+            var accountList = context.Accounts.Where(account => account.id == accountId).ToList();
+            if (accountList.Count > 0)
+            {
+                return (Account?)accountList.First();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.AppController
 {
-    public class AuthenticationController 
+    public class AuthenticationController : ControllerBase
     {
         AuthenticationService service;
 
@@ -16,7 +16,22 @@ namespace Backend.AppController
 
         public IActionResult Authenticate(AuthenticateRequest request)
         {
-            return Ok(service.Authenticate(request));
+            var response = new ControllerResponse<AuthenticateResponse>();
+            try
+            {
+                response.Data = service.Authenticate(request);
+            }
+            catch(Exception ex)
+            {
+                response.Success = false;
+                response.ErrorMessage = ex.Message; 
+            }
+            return Ok(response);
+        }
+
+        internal string test(HttpContext context)
+        {
+            return "Hello World";
         }
     }
 }

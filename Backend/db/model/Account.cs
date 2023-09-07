@@ -8,10 +8,10 @@ namespace Backend.db.model
         public int id { get; set; }
 
         [Required]
-        public string username { get; set; }
+        public string Username { get; set; }
         [Required]
-        public string hashPassword { get; set; }
+        public string HashPassword { get; set; }
         [Required]
-        public string profil { get; set; }
+        public string Profil { get; set; }
     }
 }
