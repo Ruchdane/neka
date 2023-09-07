@@ -23,6 +23,9 @@ namespace Backend.domain.services
 
             if (!accountExist.username.ToLower().Compare(accountDto.username.Tolower())
                 throw new Exception("This account with that username already exist");
+            if (accountDto.username.Contains(" ") || accountDto.username == String.Empty || accountDto.username.Length < 3)
+                throw new Exception("This username is not correct");
+            
 
 
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(accountDto.password, 10);
