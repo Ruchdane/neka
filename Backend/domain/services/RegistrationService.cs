@@ -19,7 +19,7 @@ namespace Backend.domain.services
         {
             var accountExist = _accountRepository.GetByUsername(accountDto.username);
 
-            if (accountExist == null) throw new Exception("This account with that username already exist");
+            if (accountExist) throw new Exception("This account with that username already exist");
 
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(accountDto.password, 10);
 
