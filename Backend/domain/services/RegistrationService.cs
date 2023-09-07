@@ -31,6 +31,7 @@ namespace Backend.domain.services
             var hashPassword = BCrypt.Net.BCrypt.HashPassword(accountDto.password, 10);
 
             accountDto.password = hashPassword;
+            accountDto.username = accountDto.username.ToLower();
             _accountRepository.Save(accountDto);
         }
     }
